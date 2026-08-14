@@ -150,7 +150,7 @@ class CumulativeHierarchicalFilterModule extends NewsModule
                 $category->getTitle(),
                 $category->getTitle(),
                 $this->generateItemCssClass($category),
-                null !== $activeCategories && \in_array($category, $activeCategories->getModels(), true),
+                null !== $activeCategories && \in_array($category, $activeCategories->getModels(), false),
                 !$this->showLevel || $this->showLevel >= $level ? $this->renderNewsCategories($category->id, $ids, $level) : '',
                 $category,
             );
